@@ -82,7 +82,7 @@ reminder of the logic:
   the game is a tie.
 * When the game begins, the header at the top should have no text in it.
 * When a player wins the game, then the following happens:
-  * The header at the top should read "Winner: X" or "Winner: Y" depending on
+  * The header at the top should read "Winner: X" or "Winner: O" depending on
     which player won.
   * Empty squares in the grid no longer react to clicks.
 * When the game goes into a tied state, the header at the top should read
