@@ -1,0 +1,72 @@
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+body{
+    width: 60%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* heading and winner text */
+h1{
+    margin: 75px 0 25px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    text-shadow: 1px 1px rgba(0, 123, 186, 0.5);
+}
+
+#winner-span{
+    margin-left: 20px;
+}
+
+/* game board and clickable space tiles */
+#game-board{
+    width: 40%;
+    margin: 25px 0;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    background-color: black;
+}
+
+.grid-square{
+    width: 100%;
+    padding-top: 100%;
+
+    background-color: white;
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.hover:hover{
+    background-color: rgb(237, 233, 232);
+    cursor: pointer;
+}
+
+#buttons-div{
+    margin-top: 25px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    margin: 0 20px;
+    padding: 3px 10px;
+    border: 1px solid black;
+    background-color: rgb(237, 233, 232);
+}

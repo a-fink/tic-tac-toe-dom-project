@@ -39,14 +39,17 @@ const server = http.createServer((req, res) => {
         res.statusCode = 200;
         if (ext === ".jpg" || ext === ".jpeg") {
           res.setHeader("Content-Type", "image/jpeg");
-        } else if (ext === ".css") {
+        }
+        else if (ext === ".css") {
           res.setHeader("Content-Type", "text/css");
-        } else if (ext === ".js") {
+        }
+        else if (ext === ".js") {
           res.setHeader("Content-Type", "text/javascript");
         }
         res.end(resBody);
         return;
-      } catch {
+      }
+      catch {
         console.error(
           "Cannot find asset",
           path.basename(req.url),
