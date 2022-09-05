@@ -1,4 +1,4 @@
-class TTT {
+export class TTT {
     constructor(){
         this.grid = [[' ',' ',' '],
                      [' ',' ',' '],
@@ -125,5 +125,3 @@ class TTT {
         return true;
     }
 }
-
-module.exports = TTT;

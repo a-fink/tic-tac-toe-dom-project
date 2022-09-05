@@ -1,7 +1,6 @@
-// import { TTT } from './ttt';
-const TTT = require('./ttt')
+import { TTT } from './ttt.js';
 
-class Player extends TTT{
+export class Player extends TTT{
     constructor(symbol){
         super();
         this.symbol = symbol;
@@ -36,5 +35,3 @@ class Player extends TTT{
         return false;
     }
 }
-
-module.exports = Player;

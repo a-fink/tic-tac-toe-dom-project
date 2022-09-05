@@ -57,6 +57,17 @@ h1{
     cursor: pointer;
 }
 
+.x{
+    background-image: url('https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-x.svg');
+    background-size: cover;
+}
+
+.o{
+    background-image: url('https://assets.aaonline.io/Module-DOM-API/formative-project-tic-tac-toe/player-o.svg');
+    background-size: cover;
+}
+
+/* buttons styling */
 #buttons-div{
     margin-top: 25px;
     width: 40%;
@@ -65,7 +76,7 @@ h1{
 }
 
 button{
-    margin: 0 20px;
+    margin: 0 30px;
     padding: 3px 10px;
     border: 1px solid black;
     background-color: rgb(237, 233, 232);
