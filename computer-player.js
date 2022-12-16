@@ -21,7 +21,7 @@ export class Computer extends Player{
         if(moves.length === 0) return null;
 
         // check if a winning move exists by calling winningMoves with own symbol
-        //if any are found use the 1st
+        // if any are found use the 1st
         const winningMoves = this.getWinningMoves(moves);
         if(winningMoves.length > 0) return winningMoves[0];
 

@@ -3,7 +3,6 @@ import {Computer} from './computer-player.js';
 
 let playerTurn, player, computer;
 
-// Your code here
 // once the dom is loaded set up everything else
 window.addEventListener('DOMContentLoaded', event => {
     // set up the players objects, the player turn, and the board html/css
@@ -21,18 +20,18 @@ window.addEventListener('DOMContentLoaded', event => {
     // all values in session storage set by one function, so if one exists all should exist
     // if session storage has data, restore the game state
     if(sessionStorage.getItem('player-symbol')){
-        console.log('restoring game');
+        // console.log('restoring game');
         restoreGameState();
     }
 
     // otherwise log that we're starting a new game and store the game state in session storage
     else{
-        console.log('starting new game');
+        // console.log('starting new game');
         storeGameState();
     }
 
     // log the symbols and player turn to the console for debugging purposes
-    console.log(`player is ${player.symbol}, computer is ${computer.symbol}, playerTurn is ${playerTurn}`);
+    // console.log(`player is ${player.symbol}, computer is ${computer.symbol}, playerTurn is ${playerTurn}`);
 
     // if it's the computer's turn (playerTurn set to false) then make computer take a turn
     if(playerTurn === false) doComputerTurn();
@@ -226,7 +225,7 @@ function newGameHandler(event){
     storeGameState();
 
     // log the symbols and player turn to the console for debugging purposes
-    console.log(`player is ${player.symbol}, computer is ${computer.symbol}, playerTurn is ${playerTurn}`);
+    // console.log(`player is ${player.symbol}, computer is ${computer.symbol}, playerTurn is ${playerTurn}`);
 
     // re-enable the give up button
     enableGiveUp();
