@@ -1,6 +1,8 @@
 const http = require("http");
 const { readFileSync } = require("fs");
 const path = require("path");
+
+// HTTP SERVER USED FOR DEVELOPMENT AND TESTING
 // Create a server using `http`
 const server = http.createServer((req, res) => {
   console.log(`Incoming Request - Method: ${req.method} | URL: ${req.url}`);
@@ -11,7 +13,7 @@ const server = http.createServer((req, res) => {
   });
   // When the request is finished processing the entire body
   req.on("end", () => {
-    // Parsing the body of the request
+    // Parse the body of the request
     if (reqBody) {
       req.body = reqBody
         .split("&")
@@ -25,7 +27,7 @@ const server = http.createServer((req, res) => {
     }
     // Home Page
     if (req.method === "GET" && req.url === "/") {
-      const resBody = readFileSync("./public/index.html");
+      const resBody = readFileSync("./index.html");
       res.statusCode = 200;
       res.setHeader("Content-Type", "text/html");
       res.end(resBody);
@@ -35,7 +37,7 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(req.url);
     if (req.method === "GET" && ext) {
       try {
-        const resBody = readFileSync('.' + "/public" + req.url);
+        const resBody = readFileSync('.' + "/" + req.url);
         res.statusCode = 200;
         if (ext === ".jpg" || ext === ".jpeg") {
           res.setHeader("Content-Type", "image/jpeg");
